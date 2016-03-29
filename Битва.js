@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html
+lang = "en" >
+    < head >
+    < meta
+charset - "utf-8>
+< meta
+http - equiv = "X-UA-Compatible"
+content = "IE=edge" >
+    < script >
+    alert("Здравствуй, товарищь!");
+function getRandome(min, max) {
+    var min;
+    var max;
+    var i = min + Math.random() * (max - min);
+    i = Math.floor(i);
+    return i;
+}
+
+var hp = getRandome(90, 100);
+var damage = getRandome(120, 134);
+var shield = getRandome(20, 50);
+
+function playGame() {
+    alert('hp - ' + hp + 'damage - ' + damage + 'shield - ' + shield);
+    var resultDamage = damage - shield;
+    if (resultDamage >= 0) {
+        hp = hp - resultDamage;
+    }
+    if (shield - damage <= 0) {
+        shield = 0;
+    } else {
+        shield -= damage;
+    }
+}
+alert(playGame()
+);
+alert('hp:' + hp + ' shield:' + shield);
+if (hp <= 0) {
+    alert("R.I.P.")
+} else {
+    alert("Good luck!")
+    playGame()
+}
+
+
+</
+script >
+< / head >
+< body >
+< div >
+< / div >
+
+ 
